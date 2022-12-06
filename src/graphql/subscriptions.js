@@ -7,6 +7,9 @@ export const onCreateNote = /* GraphQL */ `
       id
       name
       description
+      tags
+      address
+      website
       createdAt
       updatedAt
     }
@@ -18,6 +21,9 @@ export const onUpdateNote = /* GraphQL */ `
       id
       name
       description
+      tags
+      address
+      website
       createdAt
       updatedAt
     }
@@ -29,6 +35,9 @@ export const onDeleteNote = /* GraphQL */ `
       id
       name
       description
+      tags
+      address
+      website
       createdAt
       updatedAt
     }
