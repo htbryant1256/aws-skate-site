@@ -1,0 +1,65 @@
+
+a:visited {
+    color: white;
+}
+a:link {
+    text-decoration: none;
+}
+
+.Home-Page {
+    text-align: initial;
+    background-color: #CBD2D0;
+    min-height: 100vh;
+    font-size: calc(10px + 2vmin);
+    color: #61dafb;
+}
+
+.Home-Page-Header {
+    text-align: center;
+    background-color: #731963;
+    height: 100px;
+}
+
+.Home-Page-Column {
+    text-align: center;
+    background-color: #0B3C49;
+    float: left;
+    height: 900px;
+    width: 270px;
+}
+
+
+.Home-Page-Home-Link {
+    padding-top: 10px;
+    font-size: 40px;
+    display: block;
+   }
+
+.Home-Page-Naples-Link {
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    text-align: left;
+    font-size: 32px;
+    display: block;
+}
+
+.Home-Page-Ft-Myers-Link {
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    text-align: left;
+    font-size: 32px;
+    display: block;
+}
+
+
+.Home-Page-Body {
+    text-align:center;
+    font-size: 40px;
+    margin-left: 270px;
+    height: 870px;
+    padding-left: 40px;
+    padding-top: 30px;
+    color: black;
+}

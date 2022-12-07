@@ -12,18 +12,22 @@ import {
 } from "@aws-amplify/ui-react";
 import { listNotes } from "./graphql/queries";
 
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+import HomePage from './Pages/home-page.js';
+import NaplesPage from './Pages/naples.js';
+import FtMyersPage from './Pages/ft-myers';
+import BakerParkPage from './Pages/baker-park';
+
 const App = ({ signOut }) => {
-    const [notes, setNotes] = useState([]);
 
-    useEffect(() => {
-        fetchNotes();
-    }, []);
 
-    async function fetchNotes() {
-        const apiData = await API.graphql({ query: listNotes });
-        const notesFromAPI = apiData.data.listNotes.items;
-        setNotes(notesFromAPI);
-    }
+
+
+    
+
+
+
 
 
     return (
@@ -31,43 +35,19 @@ const App = ({ signOut }) => {
 
 
 
-
         <View className="App">
 
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/naples" element={<NaplesPage />} />
+                    <Route path="/ft-myers" element={<FtMyersPage />} />
+                    <Route path="/naples/baker-park" element={<BakerParkPage />} />
 
-            <Heading level={2}>Current Notes</Heading>
-            <View margin="3rem 0">
-                {notes.map((note) => (
-                    <Flex
-                        key={note.id || note.name}
-                        direction="row"
-                        justifyContent="center"
-                        alignItems="center"
-                    >
-                        <Text as="strong" fontWeight={700}>
-                            {note.name}
-                        </Text>
-                        <Text as="span">{note.description}</Text>
-                        <Text as="span">{note.tags}</Text>
-                        <Text as="span">{note.address}</Text>
-                        <Text as="span">{note.website}</Text>
-
-                    </Flex>
-                   
-                ))}
+                </Routes>
+            </BrowserRouter>
 
 
-
-
-                {notes.map((note) => (
-                    <Text as="span">{note.description}</Text>
-                ))}
-
-
-
-
-            </View>
-            <Button onClick={signOut}>Sign Out</Button>
         </View>
 
 
