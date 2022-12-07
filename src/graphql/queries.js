@@ -10,6 +10,8 @@ export const getNote = /* GraphQL */ `
       tags
       address
       website
+      location
+      locationID
       createdAt
       updatedAt
     }
@@ -29,6 +31,8 @@ export const listNotes = /* GraphQL */ `
         tags
         address
         website
+        location
+        locationID
         createdAt
         updatedAt
       }

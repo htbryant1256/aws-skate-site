@@ -3,13 +3,11 @@ import "@aws-amplify/ui-react/styles.css";
 import { API } from "aws-amplify";
 import {
     Button,
-    Flex,
-    Heading,
     Text,
-    View,
     withAuthenticator,
 } from "@aws-amplify/ui-react";
 import { listNotes } from "../graphql/queries";
+
 import './home-page.css'
 import { Link } from 'react-router-dom';
 {/*Website Home Page*/ }
@@ -54,13 +52,8 @@ const HomePage = ({ signOut }) => {
             <div className="Home-Page-Body">
                 Home Page
 
-                <div>
+   
 
-                    {notes.map((note) => (
-                        <Text as="span">{note.description}</Text>
-                    ))}
-
-                </div>
 
                 <div>
 

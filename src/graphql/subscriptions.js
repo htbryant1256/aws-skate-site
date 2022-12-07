@@ -10,6 +10,8 @@ export const onCreateNote = /* GraphQL */ `
       tags
       address
       website
+      location
+      locationID
       createdAt
       updatedAt
     }
@@ -24,6 +26,8 @@ export const onUpdateNote = /* GraphQL */ `
       tags
       address
       website
+      location
+      locationID
       createdAt
       updatedAt
     }
@@ -38,6 +42,8 @@ export const onDeleteNote = /* GraphQL */ `
       tags
       address
       website
+      location
+      locationID
       createdAt
       updatedAt
     }

@@ -9,4 +9,6 @@ type Note @model @auth(rules: [ { allow: public } ] ){
   tags: String
   address: String
   website: String
+  location: String
+  locationID: String
 }
