@@ -1,5 +1,14 @@
+import React, { useState, useEffect } from "react";
+import "@aws-amplify/ui-react/styles.css";
+import { API } from "aws-amplify";
+import {
+    Button,
+    Text,
+    withAuthenticator,
+} from "@aws-amplify/ui-react";
+import { listNotes } from "../graphql/queries";
+
 import './baker-park.css'
-import React from "react";
 
 import { Link } from 'react-router-dom';
 
@@ -16,6 +25,29 @@ const BakerParkPage = () => {
             .then((res) => res.json())
             .then((data) => setData(data.naples_locations));
     }, []);
+
+
+
+    const [notes, setNotes] = useState([]);
+
+    useEffect(() => {
+        fetchNotes();
+    }, []);
+
+    async function fetchNotes() {
+        const apiData = await API.graphql({ query: listNotes });
+        const notesFromAPI = apiData.data.listNotes.items;
+        setNotes(notesFromAPI);
+    }
+
+
+    var pageData = notes.find(function (e) {
+        return e.locationID == "1" && e.location == "naples";
+    });
+
+
+
+
 
     return (
         <div className="baker-park-Page">
@@ -38,14 +70,30 @@ const BakerParkPage = () => {
 
 
             <div className="baker-park-Page-Body">
-                <p>{!data ? "loading..." : data[0][0]}</p>
+                <div>
+                    <span>{!pageData ? "loading..." : pageData.name}</span>
+                </div>
+
                 <img src="https://manhattanconstructiongroup.com/manhattan-construction-company/wp-content/uploads/sites/5/2020/10/Baker-Park-8.jpg" scale=".5" />
 
                 <div className="baker-park-Location-List">
+                    <div>
+                        <span>Website: {!pageData ? "loading..." : pageData.website}</span>
+                    </div>
+                    <p/>
+                    <div>
+                        <span>Address: {!pageData ? "loading..." : pageData.address}</span>
+                    </div>
+                    <p />
 
-                    <p> Address: {!data ? "loading..." : data[0][1]}</p>
-                    <p> Description: {!data ? "loading..." : data[0][2]}</p>
+                    <div>
+                        <span>Description: {!pageData ? "loading..." : pageData.description}</span>
+                    </div>
+                    <p />
 
+                    <div>
+                        <span>Tags: {!pageData ? "loading..." : pageData.tags}</span>
+                    </div>
                 </div>
 
 
