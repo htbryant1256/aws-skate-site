@@ -7,13 +7,14 @@ import {
     withAuthenticator,
 } from "@aws-amplify/ui-react";
 import { listNotes } from "../graphql/queries";
-import './fleishmann-skate-park.css'
+
+import './centennial-park.css'
 
 import { Link } from 'react-router-dom';
 
 {/*Website Ft.Myers skate spots page*/ }
 
-const FleishmannParkPage = () => {
+const CentennialPark = () => {
 
 
     const [data, setData] = React.useState(null);
@@ -24,10 +25,6 @@ const FleishmannParkPage = () => {
             .then((res) => res.json())
             .then((data) => setData(data.naples_locations));
     }, []);
-
-
-
-
 
 
 
@@ -45,52 +42,45 @@ const FleishmannParkPage = () => {
 
 
     var pageData = notes.find(function (e) {
-        return e.locationID == "2" && e.location == "naples";
+        return e.locationID == "2" && e.location == "ft-myers";
     });
 
 
 
 
 
-
-
-
-
-
     return (
-        <div className="fleishmann-skate-park-Page">
-            <div className="fleishmann-skate-park-Page-Header">
-                <div className="fleishmann-skate-park-Page-Home-Link">
+        <div className="centennial-park-Page">
+            <div className="centennial-park-Page-Header">
+                <div className="centennial-park-Page-Home-Link">
 
                     <Link to="/">SWFL Skate Spots</Link>
 
                 </div>
-                <div className="fleishmann-skate-park-Page-Naples-Link">
+                <div className="centennial-park-Page-Naples-Link">
 
                     <Link to="/naples">Naples Page</Link>
                     <Link to="/ft-myers">&emsp;Ft.Myers Page</Link>
 
                 </div>
-                <div className="fleishmann-skate-park-Page-Ft-Myers-Link">
+                <div className="centennial-park-Page-Ft-Myers-Link">
 
                 </div>
             </div>
 
 
-   
-
-            <div className="fleishmann-skate-park-Page-Body">
+            <div className="centennial-park-Page-Body">
                 <div>
                     <span>{!pageData ? "loading..." : pageData.name}</span>
                 </div>
 
-                <img src="https://www.naplesgov.com/sites/default/files/styles/gallery500/public/imageattachments/parksrec/page/6951/skateboard.jpg?itok=xQGdtYAc" scale="1" />
+                <img src="https://u.realgeeks.media/lifeinbonitasprings/Centenial_Park_Artwork.jpg" scale=".5" />
 
-                <div className="fleishmann-skate-park-Location-List">
+                <div className="centennial-park-Location-List">
                     <div>
                         <span>Website: {!pageData ? "loading..." : pageData.website}</span>
                     </div>
-                    <p />
+                    <p/>
                     <div>
                         <span>Address: {!pageData ? "loading..." : pageData.address}</span>
                     </div>
@@ -110,6 +100,8 @@ const FleishmannParkPage = () => {
             </div>
 
 
+
+
         </div>
 
 
@@ -119,6 +111,6 @@ const FleishmannParkPage = () => {
 
 }
 
-export default FleishmannParkPage;
+export default CentennialPark;
 
 

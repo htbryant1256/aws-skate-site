@@ -45,13 +45,8 @@ const HomePage = ({ signOut }) => {
 
                 </div>
             </div>
-
+            <img src="https://images.squarespace-cdn.com/content/v1/5c62ee2277b903c0d70590bb/1591212465727-AI8N8FGDSV8ZMEWF140J/IMG_3457.JPG" scale="1" />
             <div className="Home-Page-Body">
-                Home Page
-
-   
-
-
                 <div>
 
                     <Button onClick={signOut}>Sign Out</Button>

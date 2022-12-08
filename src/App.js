@@ -19,6 +19,8 @@ import NaplesPage from './Pages/naples.js';
 import FtMyersPage from './Pages/ft-myers';
 import BakerParkPage from './Pages/baker-park';
 import FleishmannParkPage from "./Pages/fleishmann-skate-park";
+import HouseRideNature from "./Pages/house-ride-nature";
+import CentennialPark from "./Pages/centennial-park";
 
 const App = ({ signOut }) => {
 
@@ -26,10 +28,6 @@ const App = ({ signOut }) => {
 
 
     
-
-
-
-
 
     return (
 
@@ -45,6 +43,8 @@ const App = ({ signOut }) => {
                     <Route path="/ft-myers" element={<FtMyersPage />} />
                     <Route path="/naples/baker-park" element={<BakerParkPage />} />
                     <Route path="/naples/fleishmann-skate-park" element={<FleishmannParkPage />} />
+                    <Route path="/naples/house-ride-nature" element={<HouseRideNature />} />
+                    <Route path="/naples/centennial-park" element={<CentennialPark />} />
 
                 </Routes>
             </BrowserRouter>
