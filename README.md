@@ -1,4 +1,4 @@
-#AWS hosted Skateboard Location website.
+# AWS hosted Skateboard Location website.
 
 Website hosted with AWS amplify.
 
