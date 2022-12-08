@@ -54,11 +54,14 @@ const NaplesPage = () => {
 
 
 
-    var result = notes.find(function (e) {
+    var bakerData = notes.find(function (e) {
         return e.locationID == "1" && e.location == "naples";
     });
 
-    
+    var fleishmannSkateData = notes.find(function (e) {
+        return e.locationID == "2" && e.location == "naples";
+    });
+
 
 
 
@@ -71,41 +74,60 @@ const NaplesPage = () => {
                 <div className="Naples-Page-Home-Link">
 
                     <Link to="/">SWFL Skate Spots</Link>
+
+                </div>
+                <div className="Naples-Page-Naples-Link">
+
+                    <Link to="/naples">Naples Page</Link>
+                    <Link to="/ft-myers">&emsp;Ft.Myers Page</Link>
+
+                </div>
+                <div className="Naples-Page-Ft-Myers-Link">
+
                 </div>
             </div>
 
-            <div className="Naples-Page-Column">
-                    <div className="Naples-Page-Naples-Link">
-
-                        <Link to="/naples">Naples Page</Link>
-                    </div>
-                    <div className="Naples-Page-Ft-Myers-Link">
-
-                        <Link to="/ft-myers">Ft.Myers Page</Link>
-                    </div>
+ 
 
 
-            </div>
 
             <div className="Naples-Page-Body">
                 Naples Skate Spots Page
+
                 <div className="Naples-Location-List">
-                    <Link to="/naples/baker-park">{!result ? "loading..." : result.name}</Link>
-                    <p>{!data ? "loading..." : data[1]}</p>
+                    <div>
+                        <span>Location&emsp;</span>
+                        <span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;</span>
+                        <span>Address</span>
+                        <span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;</span>
+
+                        <span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;</span>
+                        <span>Tags</span>
+
+
+                    </div>
+
+
+                    <div>
+                        <Link to="/naples/baker-park">{!bakerData ? "loading..." : bakerData.name}</Link>
+                        <span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;</span>
+
+                        <span>{!bakerData ? "loading..." : bakerData.address}</span>
+                        <span>&emsp;&emsp;&emsp;&emsp;&emsp;</span>
+
+                        <span>{!bakerData ? "loading..." : bakerData.tags}</span>
+
+                    </div>
+                    <div>
+                        <Link to="/naples/fleishmann-skate-park">{!fleishmannSkateData ? "loading..." : fleishmannSkateData.name}</Link>
+                        <span>&nbsp;&nbsp;&nbsp;{!fleishmannSkateData ? "loading..." : fleishmannSkateData.address}</span>
+                        <span>&emsp;&nbsp;&nbsp;&nbsp;{!fleishmannSkateData ? "loading..." : fleishmannSkateData.tags}</span>
+
+                    </div>
                 </div>
 
-                <div>
-
-                </div>
-
-                <div>
    
-                </div>
 
-                <div>
-                    
-                </div>
-                
             </div>
 
 
@@ -121,5 +143,3 @@ const NaplesPage = () => {
 }
 
 export default NaplesPage;
-
-

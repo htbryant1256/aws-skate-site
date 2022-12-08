@@ -18,6 +18,7 @@ import HomePage from './Pages/home-page.js';
 import NaplesPage from './Pages/naples.js';
 import FtMyersPage from './Pages/ft-myers';
 import BakerParkPage from './Pages/baker-park';
+import FleishmannParkPage from "./Pages/fleishmann-skate-park";
 
 const App = ({ signOut }) => {
 
@@ -43,6 +44,7 @@ const App = ({ signOut }) => {
                     <Route path="/naples" element={<NaplesPage />} />
                     <Route path="/ft-myers" element={<FtMyersPage />} />
                     <Route path="/naples/baker-park" element={<BakerParkPage />} />
+                    <Route path="/naples/fleishmann-skate-park" element={<FleishmannParkPage />} />
 
                 </Routes>
             </BrowserRouter>
