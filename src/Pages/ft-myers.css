@@ -16,16 +16,10 @@ a:link {
 
 .Ft-Myers-Page-Header {
     text-align: center;
-    background-color: #731963;
-    height: 100px;
+    background-color: black;
+    height: 150px;
 }
 
-.Ft-Myers-Page-Column {
-    background-color: #0B3C49;
-    height: 900px;
-    float: left;
-    width: 270px;
-}
 
 
 .Ft-Myers-Page-Home-Link {
@@ -34,35 +28,18 @@ a:link {
     display: block;
 }
 
-.Ft-Myers-Page-Naples-Link {
-    padding-top: 10px;
-    padding-left: 20px;
-    padding-bottom: 20px;
-    text-align: left;
-    font-size: 32px;
-    display: block;
-}
-
-.Ft-Myers-Page-Ft-Myers-Link {
-    padding-top: 10px;
-    padding-left: 20px;
-    padding-bottom: 20px;
-    text-align: left;
-    font-size: 32px;
-    display: block;
-}
 
 
 .Ft-Myers-Page-Body {
     font-size: 40px;
-    text-align:center;
-    margin-left: 270px;
+    text-align: center;
     height: 870px;
     padding-left: 40px;
     padding-top: 30px;
     color: black;
 }
 .Ft-Myers-Location-List {
+    display: inline;
     font-size: 32px;
     text-align: left;
 }

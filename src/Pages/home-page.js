@@ -33,19 +33,16 @@ const HomePage = ({ signOut }) => {
                 <div className="Home-Page-Home-Link">
 
                     <Link to="/">SWFL Skate Spots</Link>
+
                 </div>
-                
-            </div>
-
-            <div className="Home-Page-Column">
-
                 <div className="Home-Page-Naples-Link">
 
                     <Link to="/naples">Naples Page</Link>
+                    <Link to="/ft-myers">&emsp;Ft.Myers Page</Link>
+
                 </div>
                 <div className="Home-Page-Ft-Myers-Link">
 
-                    <Link to="/ft-myers">Ft.Myers Page</Link>
                 </div>
             </div>
 

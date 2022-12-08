@@ -23,21 +23,17 @@ const FtMyersPage = () => {
                 <div className="Ft-Myers-Page-Home-Link">
 
                     <Link to="/">SWFL Skate Spots</Link>
-                </div>
-            </div>
-            <div className="Ft-Myers-Page-Column">
 
+                </div>
                 <div className="Ft-Myers-Page-Naples-Link">
 
                     <Link to="/naples">Naples Page</Link>
+                    <Link to="/ft-myers">&emsp;Ft.Myers Page</Link>
+
                 </div>
                 <div className="Ft-Myers-Page-Ft-Myers-Link">
 
-                    <Link to="/ft-myers">Ft.Myers Page</Link>
                 </div>
-
-
-
             </div>
 
 

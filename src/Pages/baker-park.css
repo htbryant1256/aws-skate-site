@@ -18,16 +18,10 @@ a:link {
 
 .baker-park-Page-Header {
     text-align: center;
-    background-color: #731963;
-    height: 100px;
+    background-color: black;
+    height: 150px;
 }
 
-.baker-park-Page-Column {
-    background-color: #0B3C49;
-    height: 1200px;
-    float: left;
-    width: 270px;
-}
 
 
 .baker-park-Page-Home-Link {
@@ -36,23 +30,6 @@ a:link {
     display: block;
 }
 
-.baker-park-Page-Naples-Link {
-    padding-top: 10px;
-    padding-left: 20px;
-    padding-bottom: 20px;
-    text-align: left;
-    font-size: 32px;
-    display: block;
-}
-
-.baker-park-Page-Ft-Myers-Link {
-    padding-top: 10px;
-    padding-left: 20px;
-    padding-bottom: 20px;
-    text-align: left;
-    font-size: 32px;
-    display: block;
-}
 
 
 .baker-park-Page-Body {

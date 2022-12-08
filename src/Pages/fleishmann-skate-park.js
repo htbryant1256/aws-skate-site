@@ -23,21 +23,17 @@ const FleishmannParkPage = () => {
                 <div className="fleishmann-skate-park-Page-Home-Link">
 
                     <Link to="/">SWFL Skate Spots</Link>
-                </div>
-            </div>
-            <div className="fleishmann-skate-park-Page-Column">
 
+                </div>
                 <div className="fleishmann-skate-park-Page-Naples-Link">
 
                     <Link to="/naples">Naples Page</Link>
+                    <Link to="/ft-myers">&emsp;Ft.Myers Page</Link>
+
                 </div>
                 <div className="fleishmann-skate-park-Page-Ft-Myers-Link">
 
-                    <Link to="/ft-myers">Ft.Myers Page</Link>
                 </div>
-
-
-
             </div>
 
 
