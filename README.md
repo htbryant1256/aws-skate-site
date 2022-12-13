@@ -24,3 +24,9 @@ https://master.d263qcn2vft92k.amplifyapp.com/
 
 # Use case Diagram:
 ![image](https://user-images.githubusercontent.com/60831223/206556930-94dd8463-4d77-438b-9597-de359718e2e6.png)
+
+
+# Photos:
+
+![image](https://user-images.githubusercontent.com/60831223/207203900-0809114e-94e3-4901-963c-903a556e45d2.png)
+![image](https://user-images.githubusercontent.com/60831223/207203973-ac31baf9-c6a4-451a-8a41-a23f4b6ae75d.png)
